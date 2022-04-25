@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="utils.ReportListener"/>
+  </listeners>
+  <test thread-count="5" name="Test(failed)">
+    <classes>
+      <class name="tests.TC_02_Product">
+        <methods>
+          <include name="clickCreate"/>
+          <include name="navigateToProduct"/>
+          <include name="navigateToInventory"/>
+          <include name="tearDown"/>
+          <include name="setup"/>
+          <include name="createProduct"/>
+          <include name="updateQuantity"/>
+        </methods>
+      </class> <!-- tests.TC_02_Product -->
+      <class name="tests.TC_03_Manufacturing">
+        <methods>
+          <include name="createManufacturingOrder"/>
+          <include name="tearDown"/>
+          <include name="setup"/>
+          <include name="verifyCreatedOrder"/>
+          <include name="clickCreate"/>
+          <include name="navigateToManufacturing"/>
+          <include name="verifyDoneStatus"/>
+          <include name="markOrderAsDone"/>
+        </methods>
+      </class> <!-- tests.TC_03_Manufacturing -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
